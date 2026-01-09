@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 - Tipo Numbers</title>
+    <style>
+        .ejercicio {
+            border: 1px black solid;
+            border-radius: 5px;
+        }
+
+        .resultado {
+            background-color: rgb(195, 192, 192);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="titulo">Ejercicios - Tipo numbers</h1>
+    <div class="ejercicio">
+        <h3>Ejercicio 1</h3>
+        <p>Haz una función que de dos números pasados por parámetros indica (saca por consola) cúal de ellos es mayor.
+        </p>
+        <div class="resultado">
+            <p id="resultado">Aquí se mostrará el resultado</p>
+        </div>
+    </div>
+
+
+    <div class="ejercicio">
+        <h3>Ejercicio 2</h3>
+        <p>Haz una función que calcule (sin usar *) la multiplicación de dos números.
+
+        </p>
+        <div class="resultado">
+            <p id="resultado2">Aquí se mostrará el resultado</p>
+        </div>
+    </div>
+
+    <div class="ejercicio">
+        <h3>Ejercicio 2</h3>
+        <p>Utilizando la función anterior haz una función que calcule la multiplicación de 3 números.
+
+        </p>
+        <div class="resultado">
+            <p id="resultado3">Aquí se mostrará el resultado</p>
+        </div>
+    </div>
+
+    <script>
+        /*
+        Primer ejericio : Haz una función que de dos números pasados por parámetros indica (saca por consola) cúal de ellos es mayor. 
+        */
+        function numeroMayor(num1,num2){
+            if(num1 > num2){
+                document.getElementById("resultado").textContent = "El primer numero es mayor al segundo"
+
+            } else if(num1 < num2){
+                document.getElementById("resultado").textContent = "El segundo numero es mayor que el primero"
+            
+            } else {
+                document.getElementById("resultado").textContent = "Los dos numeros son iguales"
+            
+
+            }
+    
+        }
+        numeroMayor(5,5)
+        /*
+        Segundo Ejercicio : Haz una función que calcule (sin usar *) la multiplicación de dos números.
+        */
+       function multiplicarSinAsterisco(num1,num2){
+        let resultado = 0;
+        for(var i = 0; num1 > i; i++){
+            resultado += num2;
+        }
+        return resultado;
+       }
+       document.getElementById("resultado2").textContent = multiplicarSinAsterisco(5,2)
+
+       /*
+       Ejercicio 3 : Utilizando la función anterior haz una función que calcule la multiplicación de 3 números.
+       */
+
+       
+
+    </script>
+
+</body>
+
+</html>
