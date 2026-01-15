@@ -40,6 +40,9 @@ document.getElementById("input-comentario").value = "¡No me lo puedo creer, es 
 
 //Crear todo un nuevo articulo usando unicamente JS
 
-//Crear el título
+// Declarar el articulo y ponerle un color de fondo
 
-// Crear el primer
+const articulo2 = document.getElementById("articulo2")
+articulo2.style.backgroundColor = "yellow"
+// Crear el primer header
+articulo2.innerHTML += '<h1>Los gatos dominarán el mundo!!!</h1>'
