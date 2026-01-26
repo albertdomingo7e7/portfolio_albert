@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #principal{
+            border: 3px solid black;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            
+
+        }
+        #contenedor{
+            min-height: 100vh;
+            width: 100%;
+            background-color: green;
+            padding: 10px;
+            border: 3px solid rgb(111, 0, 255);
+            box-sizing: border-box;
+
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: flex-end;
+            align-items: center;
+            
+            }
+            #boton{
+                width: 100px;
+                height: 75px;
+                background-color: purple;
+
+            }
+            #notificador{
+                font-size: 30px;
+                color: white;
+            }
+    </style>
+    
+</head>
+<body>
+
+    <div id="contenedor">
+        <p id="notificador"></p>
+        <div id="principal"></div>
+        <img src="../EjerciciosExam/kebab.png" alt="rico kebab" style="width: 100px;">
+        <button id="boton"></button>
+    </div>
+
+    <script src="eventos1.js">       
+    </script>
+    
+</body>
+</html>
