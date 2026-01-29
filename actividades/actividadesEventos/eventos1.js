@@ -1,8 +1,9 @@
-let notificador = document.getElementById("notificador")
+let notificador1 = document.getElementById("notificador1")
+let notificador2 = document.getElementById("notificador2")
 let boton = document.getElementById("boton")
 
 function mensajeNotificador(mensaje){
-    notificador.innerHTML = mensaje
+    notificador1.innerHTML = mensaje
 }
 
 
@@ -29,9 +30,23 @@ function dobleClick(){
 boton.addEventListener("dblclick",dobleClick)
 */
 boton.addEventListener("dblclick",() => {
-    mensajeNotificador("Doble Click detectado")
+    mensajeNotificador("Doble click detectado")
 })
 
-// Detectar la posición X,Y del mouse cuando pase por encima de la foto
+// Detectar la posición X,Y del mouse cuando pase por encima de la div "Elemento"
 
-let imagen = document.querySelector("img")
+let elemento = document.getElementById("principal")
+
+elemento.addEventListener("mousemove",function(event) {
+    const offsetX = event.pageX - elemento.offsetLeft
+    const offsetY = event.pageY - elemento.offsetTop
+    mensajeNotificador(`X :${offsetX} Y :${offsetY}`)
+})
+
+// Al presionar la tecla "Enter" nos salta una alerta por pantalla
+
+document.addEventListener("keypress", function(event){
+    if(event.key == "Enter") {
+        alert("Has apretado la tecla enter")
+    }
+})
