@@ -141,10 +141,8 @@ const alumnosJSON = `[
     }
   ]`;
 
+let alumnoParseado = JSON.parse(alumnosJSON)
 
-
-
-for(alumno of alumnosJSON){
-    console.log(alumno.)
-
+for(alumno of alumnoParseado){
+  console.log(alumno.nombre)
 }
