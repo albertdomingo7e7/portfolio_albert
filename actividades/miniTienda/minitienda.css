@@ -1,0 +1,135 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f1f1f1 0%, #374058 50%, #1f2a38 100%);
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+
+#contenedor-tienda {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 280px);
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    width: 100%;
+    max-width: 1400px;
+    box-sizing: border-box;
+}
+
+.producto {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 550px;
+    box-sizing: border-box;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.producto h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    color: #1a1a2e;
+    text-align: center;
+    height: 2.5rem;
+    overflow: hidden;
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background-color: #fcfcfc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    font-size: 0.85rem;
+    color: #444;
+    margin: 10px 0;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.4;
+    height: 3.6rem;
+}
+
+.producto p {
+    text-align: center;
+    margin: 5px 0;
+}
+
+.producto p strong {
+    font-size: 1.4rem;
+    color: #16213e;
+}
+
+.zona-opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.producto select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.selector-colores {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.circulo-color {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: transform 0.2s, outline 0.1s;
+}
+
+.circulo-color.activo {
+    outline: 2px solid #1a1a2e;
+    outline-offset: 3px;
+}
+
+.circulo-color:hover {
+    transform: scale(1.1);
+}
+
+.producto button {
+    padding: 12px;
+    background-color: #e94560;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    width: 100%;
+}
+
+.producto button:hover {
+    background-color: #ff4d6d;
+    transform: translateY(-2px);
+}
+
+.producto button:active {
+    transform: scale(0.95);
+}
